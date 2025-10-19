@@ -1,33 +1,25 @@
-# ===============================
-# Python String join() Method
-# ===============================
+# The join() function is used to combine (join) a list of strings 
+# into a single string, with a chosen separator.
+words = ['I', 'love', 'Python']
+sentence = " ".join(words)
+print(sentence)
 
-# 1. Join a list of strings
-lst = ["Python", "is", "fun"]
-s = " ".join(lst)  # join with space
-print("Join with space:", s)  # Output: "Python is fun"
+# I love Python  output
 
-# 2. Join with a different separator
-date_parts = ["2025", "09", "28"]
-date = "-".join(date_parts)  # join with dash
-print("Join with dash:", date)  # Output: "2025-09-28"
+fruits = ['apple', 'banana', 'grape']
+joined = ",".join(fruits)
+print(joined)
 
-# 3. Join a tuple of strings
-tpl = ("a", "b", "c")
-joined = ",".join(tpl)  # join with comma
-print("Join tuple with comma:", joined)  # Output: "a,b,c"
+# apple,banana,grape output
 
-# 4. Join characters of a string
-word = "hello"
-joined_chars = "-".join(word)  # insert '-' between characters
-print("Join characters with dash:", joined_chars)  # Output: "h-e-l-l-o"
+text = "Hello world from Python"
+# Split into list
+words = text.split()
+# Join with hyphen
+result = "-".join(words)
 
-# 5. Join numbers (convert to strings first)
-nums = [1, 2, 3]
-joined_nums = "-".join(map(str, nums))
-print("Join numbers with dash:", joined_nums)  # Output: "1-2-3"
+print(result) # Hello-world-from-Python
 
-# Key Notes:
-# - join() is a string method (separator.join(iterable))
-# - All elements in iterable must be strings
-# - It returns a new string; does not modify original iterable
+
+
+

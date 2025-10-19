@@ -1,5 +1,8 @@
 
-# String Operations in Python
+
+# The split() function is used to break a string into a list of words or parts based on a 
+# separator (by default, space " ").
+# # String Operations in Python
 
 s = "datastructure"
 
