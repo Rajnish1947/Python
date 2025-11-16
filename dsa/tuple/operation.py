@@ -1,6 +1,14 @@
-
 # Python Tuple Operations
 
+# Creating tuples
+t1 = (10, 20, 30, 40, 50)
+t2 = ('apple', 'banana', 'cherry')
+t3 = (1, 2, 2, 3, 2)
+tule = (1, 2, 3, 4)
+
+# Repetition (*)
+print(tule * 3)  # (1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)
+print(tule * 3 +t2) # (1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 'apple', 'banana', 'cherry')
 
 # 1. len() → length of tuple
 print(len(t1))  # 5
@@ -18,7 +26,7 @@ print(t1[::-1]) # (50, 40, 30, 20, 10) → reversed
 print(t3.count(2))  # 3
 
 # 5. index() → find first index of element
-print(t3.index(3))  # 2
+print(t3.index(3))  # 3
 
 # 6. min() → smallest element
 print(min(t1))  # 10
@@ -31,17 +39,20 @@ print(sum(t1))  # 150
 
 # 9. Nesting tuples
 nested = (t1, t2)
-print(nested)  # ((10, 20, 30, 40, 50), ('apple', 'banana', 'cherry'))
+print(nested)
+# ((10, 20, 30, 40, 50), ('apple', 'banana', 'cherry'))
 
 # 10. Concatenation (+)
 t4 = (60, 70)
-print(t1 + t4)  # (10, 20, 30, 40, 50, 60, 70)
+print(t1 + t4)
+# (10, 20, 30, 40, 50, 60, 70)
 
 # 11. Repetition (*)
-print(t2 * 2)   # ('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
+print(t2 * 2)
+# ('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
 
 # 12. Membership (in / not in)
-print(30 in t1)     # True
+print(30 in t1)         # True
 print("mango" not in t2)  # True
 
 # 13. Converting list ↔ tuple
@@ -55,4 +66,5 @@ print(lst2)        # ['apple', 'banana', 'cherry']
 # 14. Iterating through tuple
 for item in t2:
     print(item)
+
 

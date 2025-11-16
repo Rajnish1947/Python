@@ -5,34 +5,31 @@
 # Partition the array so that elements smaller than pivot go left, and bigger go right.
 # Recursively apply quicksort on left and right subarrays.
 
-def partition(arr, low, high):
-    pivot = arr[high]   # last element as pivot
-    i = low - 1         # index of smaller element
-
-    for j in range(low, high):
-        if arr[j] <= pivot:   # if current element <= pivot
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]   # swap
-
-    # place pivot in correct position
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
 
 
-def quickSort(arr, low, high):
-    if low < high:
-        # Partitioning index
-        pi = partition(arr, low, high)
+def partition(nums, l, r):
+    key = nums[r]
+    start = l
 
-        # Sort left and right parts
-        quickSort(arr, low, pi - 1)
-        quickSort(arr, pi + 1, high)
+    for i in range(l, r+1):
+        if nums[i] <= key:
+            temp = nums[i]
+            nums[i] = nums[start]
+            nums[start] = temp
+            start = start + 1   # FIX
+
+    return start - 1            # FIX
 
 
-# Driver Code
-arr = [10, 7, 8, 9, 1, 5]
-print("Original Array:", arr)
+def quickSort(nums, l, r):
+    if l >= r:
+        return
 
-quickSort(arr, 0, len(arr) - 1)
+    p = partition(nums, l, r)
+    quickSort(nums, l, p - 1)
+    quickSort(nums, p + 1, r)
 
-print("Sorted Array:", arr)
+
+nums = [64, 25, 12, 22, 11, 90]
+quickSort(nums, 0, len(nums) - 1)
+print(nums)

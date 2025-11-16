@@ -1,4 +1,4 @@
-# ye sab operation py me allow nahi hai
+# ye sab operation py me allow nahi hai q ye immutable hota hai
 
 # append() → naye element add karna
 

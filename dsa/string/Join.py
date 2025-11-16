@@ -1,24 +1,22 @@
 # The join() function is used to combine (join) a list of strings 
 # into a single string, with a chosen separator.
 words = ['I', 'love', 'Python']
+# list ko strig me convert karne ke liye 
 sentence = " ".join(words)
-print(sentence)
-
-# I love Python  output
+print(sentence)      # Output: I love Python
 
 fruits = ['apple', 'banana', 'grape']
 joined = ",".join(fruits)
-print(joined)
-
-# apple,banana,grape output
+print(joined)        # Output: apple,banana,grape
 
 text = "Hello world from Python"
-# Split into list
+#string into list 
 words = text.split()
+print(words)    # Output: ['Hello', 'world', 'from', 'Python']
 # Join with hyphen
 result = "-".join(words)
 
-print(result) # Hello-world-from-Python
+print(result)        # Output: Hello-world-from-Python
 
 
 
