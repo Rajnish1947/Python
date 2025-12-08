@@ -2,6 +2,7 @@
 numbers = [10, 20, 30, 40]
 name=["pooja","rani","kajal"]
 
+
 # Accessing elements
 print(numbers[0])      # 10
 
